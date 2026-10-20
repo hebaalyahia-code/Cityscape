@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سيتي سكيب | هبة اليحيى</title>
+<meta name="description" content="عزّز حضورك، ضاعف فرصك — حلول تمكّنك من تعزيز حضور علامتك وارتباطها بسيتي سكيب، الحدث العقاري الأضخم.">
+<meta property="og:title" content="عزّز حضورك ضاعف فرصك | هبة اليحيى">
+<meta property="og:description" content="سواء كنت مشاركًا في المعرض أو مواكبًا للحدث من الخارج، نقدم لك باقة من الحلول لتعزيز حضور علامتك.">
+<meta property="og:image" content="assets/cityscape-venue.jpg">
+<meta name="theme-color" content="#F7F3FA">
+<link rel="icon" href="https://www.hebaalyahia.com/assets/img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{
+  --ar:"Cairo","Segoe UI",Tahoma,sans-serif;
+  --lat:"Jost","Helvetica Neue",Arial,sans-serif;
+  --ink:#403F3F;
+  --ink-soft:rgba(64,63,63,.68);
+  --ink-faint:rgba(64,63,63,.38);
+  --cream:#FBF8F4;
+  --lav-50:#F6F2FB;
+  --lav-100:#ECE4F7;
+  --lav-200:#D9CBF0;
+  --lav-400:#A88BE0;
+  --violet:#8B5CF6;
+  --violet-deep:#6B43C4;
+  --hair:rgba(107,67,196,.14);
+  --card:rgba(255,255,255,.62);
+  --pad:clamp(16px,6vw,96px);
+  --maxw:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--ar);color:var(--ink);background:var(--cream);
+  line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Background (post-style: faded venue + violet glow) ---------- */
+.bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:var(--cream)}
+.bg__photo{
+  position:absolute;inset:auto 0 0 0;height:75vh;
+  background:url(assets/cityscape-venue.jpg) center 70%/cover no-repeat;
+  opacity:.16;filter:saturate(.5) sepia(.25);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 55%);
+          mask-image:linear-gradient(to bottom,transparent 0%,#000 55%);
+}
+.bg__glow{
+  position:absolute;width:min(1100px,140vw);aspect-ratio:1.4;
+  top:6vh;left:50%;transform:translateX(-58%);
+  background:radial-gradient(closest-side,rgba(139,92,246,.30),rgba(168,139,224,.16) 45%,transparent 75%);
+  filter:blur(20px);
+}
+.bg__wash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,248,244,.9) 0%,rgba(246,242,251,.35) 40%,rgba(251,248,244,.75) 100%)}
+
+/* ---------- Header ---------- */
+.header{
+  max-width:var(--maxw);margin:0 auto;padding:28px var(--pad) 0;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.header__logo img{height:clamp(40px,5vw,56px);width:auto}
+.header__site{font-family:var(--lat);font-size:13px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;transition:color .2s}
+.header__site:hover{color:var(--violet-deep)}
+
+/* ---------- Hero ---------- */
+.hero{max-width:var(--maxw);margin:0 auto;padding:clamp(48px,9vh,110px) var(--pad) 40px;text-align:center}
+.hero__cs{width:min(560px,82vw);height:auto;margin:0 auto}
+.hero__title{
+  margin-top:clamp(18px,3vw,30px);
+  font-weight:800;font-size:clamp(40px,7.4vw,92px);line-height:1.25;letter-spacing:-.01em;color:var(--ink);
+}
+.hero__title i{font-style:normal;white-space:nowrap}
+.hero__title span{white-space:nowrap;
+  background:linear-gradient(90deg,var(--violet-deep),var(--lav-400));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero__lede{
+  max-width:720px;margin:clamp(18px,2.6vw,28px) auto 0;
+  font-size:clamp(16px,1.6vw,19px);font-weight:500;color:var(--ink-soft);
+}
+
+/* ---------- Path switch ---------- */
+.switch-wrap{text-align:center;padding:clamp(28px,5vw,48px) var(--pad) 0}
+.switch-label{font-size:14px;font-weight:600;color:var(--ink-faint);margin-bottom:14px}
+.switch{
+  display:inline-flex;gap:6px;padding:6px;border-radius:999px;
+  background:rgba(255,255,255,.7);border:1px solid var(--hair);
+  box-shadow:0 10px 30px -14px rgba(107,67,196,.35);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.switch button{
+  font-family:var(--ar);font-size:clamp(15px,1.7vw,18px);font-weight:700;color:var(--ink-soft);
+  border:0;background:transparent;cursor:pointer;
+  padding:12px clamp(22px,4vw,44px);border-radius:999px;transition:background .25s,color .25s,box-shadow .25s;
+}
+.switch button:hover{color:var(--violet-deep)}
+.switch button[aria-selected="true"]{
+  background:var(--violet);color:#fff;box-shadow:0 8px 20px -8px rgba(139,92,246,.8);
+}
+.switch button:focus-visible{outline:2px solid var(--violet-deep);outline-offset:2px}
+
+/* ---------- Panels ---------- */
+.panel{max-width:var(--maxw);margin:0 auto;padding:clamp(40px,6vw,72px) var(--pad) clamp(56px,8vw,96px)}
+.panel[hidden]{display:none}
+.panel.is-in{animation:rise .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.panel__eyebrow{font-family:var(--lat);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--violet-deep);text-align:center}
+.panel__head{text-align:center;font-size:clamp(24px,3vw,34px);font-weight:800;margin-top:6px}
+
+.grid{display:grid;gap:clamp(14px,2vw,22px);margin-top:clamp(28px,4vw,44px)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+
+.card{
+  position:relative;padding:clamp(24px,3vw,34px);border-radius:22px;
+  background:var(--card);border:1px solid var(--hair);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:0 18px 40px -28px rgba(64,63,63,.35);
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.35);box-shadow:0 24px 50px -26px rgba(107,67,196,.45)}
+.card__step{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:700;color:var(--violet-deep);
+  background:var(--lav-100);padding:4px 14px;border-radius:999px;
+}
+.card__step b{font-family:var(--lat);font-weight:500;font-size:12px;letter-spacing:.1em}
+.card__title{font-size:clamp(20px,2vw,24px);font-weight:800;line-height:1.5;margin-top:16px}
+.card__title{font-size:clamp(17px,1.6vw,19px);color:var(--ink-soft)}
+.card__title em{display:block;font-style:normal;font-size:clamp(22px,2.2vw,27px);color:var(--violet-deep)}
+.grid--2 .card__title{font-size:clamp(20px,2vw,24px);color:var(--ink)}
+.card__text{margin-top:10px;font-size:16px;color:var(--ink-soft)}
+.card ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.card li{position:relative;padding-inline-start:20px;font-size:16px;font-weight:500}
+.card li::before{
+  content:"";position:absolute;inset-inline-start:0;top:.75em;width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(135deg,var(--lav-400),var(--violet-deep));
+}
+.card__icon{
+  width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--lav-100),var(--lav-200));color:var(--violet-deep);
+}
+.card__icon svg{width:26px;height:26px}
+
+/* connector line between stages on wide screens */
+.grid--steps{position:relative}
+.grid--steps::before{
+  content:"";position:absolute;top:44px;inset-inline:16%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--lav-400),transparent);z-index:-1;
+}
+
+/* ---------- Feature (beyond your booth) ---------- */
+.feature{
+  position:relative;overflow:hidden;margin-top:clamp(20px,3vw,32px);
+  border-radius:28px;padding:clamp(30px,5vw,56px);
+  background:linear-gradient(120deg,#5B36B0 0%,var(--violet) 55%,#B497EE 100%);color:#fff;
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,36px);align-items:center;
+  box-shadow:0 30px 60px -30px rgba(91,54,176,.7);
+}
+.feature::after{
+  content:"";position:absolute;width:420px;height:420px;border-radius:50%;
+  inset-inline-end:-120px;top:-180px;background:radial-gradient(closest-side,rgba(255,255,255,.28),transparent);
+}
+.feature__badge{
+  width:clamp(64px,8vw,88px);aspect-ratio:1;border-radius:24px;display:grid;place-items:center;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);
+}
+.feature__badge svg{width:46%;height:46%}
+.feature__tag{font-size:13px;font-weight:600;opacity:.85}
+.feature__title{font-size:clamp(26px,3.6vw,42px);font-weight:800;line-height:1.35;margin-top:2px}
+.feature__text{margin-top:10px;font-size:clamp(15px,1.5vw,18px);opacity:.92;max-width:760px}
+
+/* ---------- CTA ---------- */
+.cta{text-align:center;margin-top:clamp(40px,6vw,64px)}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--ar);font-size:clamp(17px,1.9vw,21px);font-weight:800;color:#fff;
+  background:var(--violet);padding:14px 34px;border-radius:6px;
+  box-shadow:0 14px 30px -12px rgba(139,92,246,.85);transition:transform .2s,background .2s,box-shadow .2s;
+}
+.btn:hover{background:var(--violet-deep);transform:translateY(-2px)}
+.btn:focus-visible{outline:2px solid var(--violet-deep);outline-offset:3px}
+.btn svg{width:20px;height:20px}
+.cta__note{margin-top:12px;font-size:14px;color:var(--ink-faint)}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid var(--hair);background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.footer__in{
+  max-width:var(--maxw);margin:0 auto;padding:36px var(--pad);
+  display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;
+}
+.footer__logo img{height:44px;width:auto}
+.social{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.social a{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--hair);background:#fff;color:var(--ink);
+  transition:background .2s,color .2s,transform .2s,border-color .2s;
+}
+.social a:hover{background:var(--violet);border-color:var(--violet);color:#fff;transform:translateY(-3px)}
+.social a:focus-visible{outline:2px solid var(--violet-deep);outline-offset:2px}
+.social svg{width:20px;height:20px}
+.footer__meta{font-family:var(--lat);font-size:14px;letter-spacing:.06em;color:var(--ink-soft);line-height:1.7}
+.footer__meta a:hover{color:var(--violet-deep)}
+.footer__copy{font-size:12px;color:var(--ink-faint)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .grid--3,.grid--2{grid-template-columns:1fr}
+  .grid--steps::before{display:none}
+  .feature{grid-template-columns:1fr;text-align:right}
+}
+@media (max-width:480px){
+  .header{padding-top:20px}
+  .switch{display:flex;width:100%}
+  .switch button{flex:1;padding-inline:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg" aria-hidden="true">
+  <div class="bg__photo"></div>
+  <div class="bg__glow"></div>
+  <div class="bg__wash"></div>
+</div>
+
+<header class="header">
+  <a class="header__logo" href="https://www.hebaalyahia.com/" aria-label="هبة اليحيى — الموقع الرئيسي">
+    <img src="assets/heba-logo.svg" alt="Heba Alyahia">
+  </a>
+  <a class="header__site" href="https://www.hebaalyahia.com/">hebaalyahia.com</a>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>
+      <img class="hero__cs" src="assets/cityscape-logo.svg" alt="Cityscape Global">
+      <span class="hero__title" style="display:block"><i>عزّز حضورك</i> <span>ضاعف فرصك</span></span>
+    </h1>
+    <p class="hero__lede">
+      سواء كنت مشاركًا في المعرض في أرض الميدان، أو مواكبًا للحدث من الخارج، نقدّم لك باقة من الحلول التي تمكّنك من تعزيز حضور علامتك وارتباطها بالحدث العقاري الأضخم.
+    </p>
+  </section>
+
+  <div class="switch-wrap">
+    <p class="switch-label">اختر مسارك</p>
+    <div class="switch" role="tablist" aria-label="اختر مسارك">
+      <button role="tab" id="tab-exhibitor" aria-controls="panel-exhibitor" aria-selected="true">مشارك</button>
+      <button role="tab" id="tab-follower" aria-controls="panel-follower" aria-selected="false" tabindex="-1">مواكب للحدث</button>
+    </div>
+  </div>
+
+  <!-- ===== المسار الأول: مشارك ===== -->
+  <section class="panel is-in" id="panel-exhibitor" role="tabpanel" aria-labelledby="tab-exhibitor">
+    <p class="panel__eyebrow">Exhibitor</p>
+    <h2 class="panel__head">رحلتك في ثلاث مراحل</h2>
+
+    <div class="grid grid--3 grid--steps">
+      <article class="card">
+        <span class="card__step">المرحلة الأولى <b>01</b></span>
+        <h3 class="card__title">قبل الحدث: <em>مهّد لحضورك</em></h3>
+        <ul>
+          <li>حزمة إعلان المشاركة</li>
+          <li>حزمة محتويات تسويقية</li>
+          <li>بنك قوالب المحتوى</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="card__step">المرحلة الثانية <b>02</b></span>
+        <h3 class="card__title">أثناء الحدث: <em>استثمر مشاركتك</em></h3>
+        <p class="card__text">
+          نستقبل مواد مشاركتك لكل ما يحدث في جناحك يوميًا ونحوّلها إلى تغطيات وإعلانات واتفاقيات جاهزة للنشر، بهوية متناسقة تعزّز تفاعلك وتمنح مشاركتك حضورًا مستمرًا وسط زخم الحدث.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="card__step">المرحلة الثالثة <b>03</b></span>
+        <h3 class="card__title">بعد الحدث: <em>وثّق أثرك</em></h3>
+        <ul>
+          <li>حزمة محتويات تسويقية</li>
+          <li>ملخص وإحصائيات المشاركة</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="feature">
+      <div class="feature__badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M8 14l3 3 5-5"/></svg>
+      </div>
+      <div>
+        <p class="feature__tag">حلّ مشترك في جميع المراحل</p>
+        <h3 class="feature__title">تجاوز حدود جناحك!</h3>
+        <p class="feature__text">
+          لا تدع اهتمام العملاء ينتهي بمغادرتهم جناحك؛ امنحهم وجهة رقمية تجمع تفاصيل مشروعك وعروضك ومزاياه، وتحوّل فضولهم إلى استفسارات وفرص بيعية قابلة للمتابعة من خلال صفحات هبوط احترافية.
+        </p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a class="btn" href="https://wa.me/966548651125?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D9%84%D9%88%D9%84%20%D8%B3%D9%8A%D8%AA%D9%8A%20%D8%B3%D9%83%D9%8A%D8%A8%20%28%D9%85%D8%B3%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%83%29" target="_blank" rel="noopener">
+        تواصل معنا الآن
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== المسار الثاني: مواكب للحدث ===== -->
+  <section class="panel" id="panel-follower" role="tabpanel" aria-labelledby="tab-follower" hidden>
+    <p class="panel__eyebrow">Beyond the venue</p>
+    <h2 class="panel__head">كن حاضرًا وإن لم تكن هناك</h2>
+
+    <div class="grid grid--2">
+      <article class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+        </div>
+        <h3 class="card__title">تواجد في دائرة المنافسة</h3>
+        <p class="card__text">
+          لا تدع غيابك عن الحدث يعني غيابك عن الفرص؛ أنشئ وجهة رقمية تجمع تفاصيل مشروعك وعروضك ومزاياه، وتمنح جمهور الحدث فرصة لاكتشافك والتواصل معك، لتبقى حاضرًا في دائرة المنافسة.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </div>
+        <h3 class="card__title">واكب الحدث وعزّز تفاعلك</h3>
+        <p class="card__text">
+          عزّز حضورك بحزمة من المحتويات التسويقية التي تمنح علامتك حضورها وسط الزخم.
+        </p>
+      </article>
+    </div>
+
+    <div class="cta">
+      <a class="btn" href="https://wa.me/966548651125?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D9%84%D9%88%D9%84%20%D8%B3%D9%8A%D8%AA%D9%8A%20%D8%B3%D9%83%D9%8A%D8%A8%20%28%D9%85%D8%B3%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%83%D8%A8%29" target="_blank" rel="noopener">
+        تواصل معنا الآن
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__in">
+    <a class="footer__logo" href="https://www.hebaalyahia.com/" aria-label="هبة اليحيى"><img src="assets/heba-logo.svg" alt="Heba Alyahia"></a>
+
+    <nav class="social" aria-label="حسابات التواصل الاجتماعي">
+      <a href="https://www.linkedin.com/in/heba-alyahia-b8b9b1114" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="https://x.com/heba_signature" target="_blank" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.63 7.58H.48l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.48 3.24H4.3l13.31 17.41z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/heba_signature" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r=".9" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://snapchat.com/t/2kxGFad5n" target="_blank" rel="noopener" aria-label="Snapchat">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.2 1.5c2.6 0 4.8 1.5 5.8 3.8.4.9.3 2.4.2 3.6l-.1.6c.1.1.3.1.6.1.3 0 .7-.1 1.1-.3.2-.1.3-.1.5-.1.2 0 .4 0 .5.1.4.1.7.4.7.8 0 .3-.2.7-.9 1-.1 0-.2.1-.4.1-.5.2-1.3.4-1.5.9-.1.3 0 .6.2 1l.1.1c.1.2 1.5 3.4 4.7 3.9.2 0 .4.3.4.5 0 .1 0 .2-.1.2-.2.6-1.3 1-3.3 1.3-.1.1-.1.4-.2.6 0 .2-.1.4-.1.6-.1.2-.2.3-.5.3H18c-.2 0-.6-.1-1-.1-.4-.1-.8-.1-1.3-.1-.3 0-.6 0-.9.1-.6.1-1.1.4-1.7.9-.8.6-1.7 1.2-3 1.2h-.3c-1.3 0-2.2-.6-3-1.2-.6-.4-1.1-.8-1.7-.9-.3 0-.6-.1-.9-.1-.5 0-.9.1-1.3.2-.3 0-.6.1-.8.1-.3 0-.5-.1-.6-.4l-.1-.6c-.1-.2-.1-.5-.2-.6-2-.3-3.1-.7-3.3-1.3 0-.1-.1-.2-.1-.2 0-.3.2-.5.4-.5 3.2-.5 4.6-3.7 4.7-3.9l.1-.1c.2-.4.3-.7.2-1-.2-.5-1-.7-1.5-.9l-.4-.1c-.9-.4-1-.8-1-1 .1-.4.5-.8 1-.8.1 0 .3 0 .4.1.4.2.8.3 1.1.3.3 0 .5-.1.6-.1l-.1-.6c-.1-1.2-.2-2.7.2-3.6 1-2.3 3.2-3.8 5.8-3.8h.4z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@heba_signature" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.6 2.6 0 0 1-2.59-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+      </a>
+    </nav>
+
+    <p class="footer__meta">
+      <a href="https://www.instagram.com/heba_signature" target="_blank" rel="noopener">@heba_signature</a><br>
+      <a href="https://www.hebaalyahia.com/">hebaalyahia.com</a>
+    </p>
+    <p class="footer__copy">© <span id="yr">2026</span> هبة اليحيى. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab,focus){
+    tabs.forEach(function(t){
+      var on=t===tab, panel=document.getElementById(t.getAttribute('aria-controls'));
+      t.setAttribute('aria-selected',on);
+      t.tabIndex=on?0:-1;
+      panel.hidden=!on;
+      panel.classList.toggle('is-in',on);
+    });
+    if(focus)tab.focus();
+    try{history.replaceState(null,'','#'+tab.id.replace('tab-',''))}catch(e){}
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      // RTL: ArrowLeft moves forward, ArrowRight moves back
+      var d=e.key==='ArrowLeft'?1:e.key==='ArrowRight'?-1:0;
+      if(d){e.preventDefault();select(tabs[(i+d+tabs.length)%tabs.length],true)}
+    });
+  });
+  var h=location.hash.slice(1);
+  if(h){var t=document.getElementById('tab-'+h);if(t)select(t)}
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
